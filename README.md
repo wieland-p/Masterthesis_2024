@@ -3,6 +3,10 @@ Replication repository for my master's thesis
 ### Title: The Green Party and Local Climate Action - An Instrumental Variable Analysis of German Municipalities
 ### Date: 01.07.2024
 #######################
-### Content: R-scripts for regression models, descriptive statistics, robustness checks and data visualization
-### Data: to run the scripts, data can be provided upon request
+# Content: 
+### MA_PW_polls: R-script for election poll data visualization
+### MA_PW_maps: R-script for geographical data visualization 
+### MA_PW_regression: R-script for regression models, descriptive statistics
+### MA_PW_robustness: R-script for robustness check
+### Data access: upon request by mail
 ### Mail: wielandp@hu-berlin.de
