@@ -106,32 +106,19 @@ colors <- c("0-5k" = "lightyellow", "5k-10k" = "yellow", "10k-50k" = "lightgreen
 
 # plot
 ggplot() +
-  # Plot the base map of Germany
   geom_sf(data = germany_shapefile, fill = "white", color = "black") +
-  
-  # Plot the municipalities with population size categories
   geom_sf(data = d_map_sf, 
           aes(size = pop_insgesamt, fill = pop_category), 
           shape = 21, 
           color = "black", 
           alpha = 1, 
           show.legend = "point") +
-  
-  # Add a manual fill scale for the population categories
   scale_fill_manual(values = colors, name = "Population Size: color") +
-  
-  # Scale the size of the points according to population size
   scale_size_continuous(name = "Population Size", 
                         breaks = c(5000, 10000, 50000, 100000, 500000, 1000000), 
                         labels = c("5k", "10k", "50k", "100k", "500k", "1M"), 
                         range = c(1, 10)) +
-  
-  # Use a minimal theme with no additional features
   theme_void() +
-  
-  # Increase the size of the colored dots in the legend
   guides(fill = guide_legend(override.aes = list(size = 6))) +
-  
-  # Position the legend to a more visible location
   theme(legend.position = "right")
 ########################################################################################################################
